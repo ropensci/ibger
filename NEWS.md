@@ -1,4 +1,10 @@
-# ibger (development version)
+# ibger 0.2.1
+
+* The package was peer-reviewed and accepted by rOpenSci
+  (ropensci/software-review#787). The repository moved to
+  <https://github.com/ropensci/ibger> and the documentation to
+  <https://docs.ropensci.org/ibger/>; the rOpenSci Code of Conduct now
+  applies.
 
 ## Changes from the rOpenSci review (ropensci/software-review#787)
 

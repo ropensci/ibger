@@ -15,7 +15,6 @@
 ^CLAUDE\.md$
 ^CLAUDE\.local\.md$
 ^\.claude$
-^CODE_OF_CONDUCT\.md$
 ^CONTRIBUTING\.md$
 ^codemeta\.json$
 ^\.covrignore$

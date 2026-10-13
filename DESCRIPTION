@@ -1,6 +1,6 @@
 Package: ibger
 Title: Access the 'IBGE' Aggregate Data API from 'R'
-Version: 0.2.0.9000
+Version: 0.2.1
 Authors@R: c(
     person("André", "Leite", email = "leite@castlab.org", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-4718-9766")),
@@ -22,9 +22,9 @@ Description: 'Tidyverse'-friendly interface to the Brazilian Institute of Geogra
     <https://servicodados.ibge.gov.br/api/docs/agregados?versao=3>. Query aggregates, variables, localities, periods, and metadata
     from surveys and censuses conducted by 'IBGE'.
 License: MIT + file LICENSE
-URL: https://github.com/StrategicProjects/ibger,
-    https://strategicprojects.github.io/ibger/
-BugReports: https://github.com/StrategicProjects/ibger/issues
+URL: https://docs.ropensci.org/ibger/,
+    https://github.com/ropensci/ibger
+BugReports: https://github.com/ropensci/ibger/issues
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 Depends: 

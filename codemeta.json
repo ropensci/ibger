@@ -4,11 +4,11 @@
   "identifier": "ibger",
   "description": "'Tidyverse'-friendly interface to the Brazilian Institute of Geography and Statistics ('IBGE') aggregate data 'API' <https://servicodados.ibge.gov.br/api/docs/agregados?versao=3>. Query aggregates, variables, localities, periods, and metadata from surveys and censuses conducted by 'IBGE'.",
   "name": "ibger: Access the 'IBGE' Aggregate Data API from 'R'",
-  "relatedLink": "https://strategicprojects.github.io/ibger/",
-  "codeRepository": "https://github.com/StrategicProjects/ibger",
-  "issueTracker": "https://github.com/StrategicProjects/ibger/issues",
+  "relatedLink": "https://docs.ropensci.org/ibger/",
+  "codeRepository": "https://github.com/ropensci/ibger",
+  "issueTracker": "https://github.com/ropensci/ibger/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.2.0.9000",
+  "version": "0.2.1",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
@@ -336,9 +336,9 @@
     "SystemRequirements": null
   },
   "fileSize": "992.188KB",
-  "releaseNotes": "https://github.com/StrategicProjects/ibger/blob/main/NEWS.md",
-  "readme": "https://github.com/StrategicProjects/ibger/blob/main/README.md",
-  "contIntegration": ["https://github.com/StrategicProjects/ibger/actions/workflows/R-CMD-check.yaml", "https://app.codecov.io/gh/StrategicProjects/ibger"],
+  "releaseNotes": "https://github.com/ropensci/ibger/blob/main/NEWS.md",
+  "readme": "https://github.com/ropensci/ibger/blob/main/README.md",
+  "contIntegration": ["https://github.com/ropensci/ibger/actions/workflows/R-CMD-check.yaml", "https://app.codecov.io/gh/ropensci/ibger"],
   "developmentStatus": "https://www.repostatus.org/#active",
   "review": {
     "@type": "Review",

@@ -1,12 +1,4 @@
-url: https://strategicprojects.github.io/ibger/
-
-template:
-  bootstrap: 5
-  bootswatch: cosmo
-  bslib:
-    primary: "#0d3b66"
-    border-radius: 0.5rem
-    btn-border-radius: 0.25rem
+url: https://docs.ropensci.org/ibger/
 
 navbar:
   structure:

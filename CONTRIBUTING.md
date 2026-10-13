@@ -43,5 +43,5 @@ to propose changes and what we expect from contributions.
 ## Code of conduct
 
 This project is released with a
-[Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating you
-agree to abide by its terms.
+[Contributor Code of Conduct](https://ropensci.org/code-of-conduct/).
+By participating you agree to abide by its terms.

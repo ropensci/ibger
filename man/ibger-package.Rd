@@ -13,9 +13,9 @@
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/StrategicProjects/ibger}
-  \item \url{https://strategicprojects.github.io/ibger/}
-  \item Report bugs at \url{https://github.com/StrategicProjects/ibger/issues}
+  \item \url{https://docs.ropensci.org/ibger/}
+  \item \url{https://github.com/ropensci/ibger}
+  \item Report bugs at \url{https://github.com/ropensci/ibger/issues}
 }
 
 }

@@ -42,7 +42,7 @@ install.packages("ibger")
 
 # Development version
 # install.packages("remotes")
-remotes::install_github("StrategicProjects/ibger")
+remotes::install_github("ropensci/ibger")
 ```
 
 

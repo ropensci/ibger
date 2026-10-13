@@ -14,7 +14,7 @@ pkgdown::build_site()
 # The site will be generated in the docs/ folder (gitignored).
 # Open docs/index.html in your browser to preview.
 
-# Deployment is automated: the .github/workflows/pkgdown.yaml GitHub Action
-# rebuilds the site on every push to main and publishes it to the gh-pages
-# branch, which GitHub Pages serves at https://strategicprojects.github.io/ibger/.
+# The published site is built by rOpenSci from the main branch and served at
+# https://docs.ropensci.org/ibger/ (see
+# https://devguide.ropensci.org/building.html#docsropensci).
 # You normally don't need to run this script except for a local preview.

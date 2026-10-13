@@ -5,9 +5,9 @@
 ![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/ibger)  
 ![CRAN Downloads](https://cranlogs.r-pkg.org/badges/grand-total/ibger)
   ![License](https://img.shields.io/badge/license-MIT-darkviolet.svg) 
-![](https://img.shields.io/badge/devel%20version-0.2.0-blue.svg)
-[![R-CMD-check](https://github.com/StrategicProjects/ibger/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/StrategicProjects/ibger/actions/workflows/R-CMD-check.yaml)
-[![Codecov test coverage](https://codecov.io/gh/StrategicProjects/ibger/graph/badge.svg)](https://app.codecov.io/gh/StrategicProjects/ibger)
+![](https://img.shields.io/badge/devel%20version-0.2.1-blue.svg)
+[![R-CMD-check](https://github.com/ropensci/ibger/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ropensci/ibger/actions/workflows/R-CMD-check.yaml)
+[![Codecov test coverage](https://codecov.io/gh/ropensci/ibger/graph/badge.svg)](https://app.codecov.io/gh/ropensci/ibger)
 [![Status at rOpenSci Software Peer Review](https://badges.ropensci.org/787_status.svg)](https://github.com/ropensci/software-review/issues/787)
 <!-- badges: end -->
 
@@ -19,9 +19,18 @@ IBGE (Brazilian Institute of Geography and Statistics).
 
 ## Installation
 
+Install the released version from CRAN:
+
 ``` r
-# install.packages("remotes")
-remotes::install_github("StrategicProjects/ibger")
+install.packages("ibger")
+```
+
+or the development version from
+[R-universe](https://ropensci.r-universe.dev/ibger):
+
+``` r
+install.packages("ibger", repos = c("https://ropensci.r-universe.dev",
+                                    "https://cloud.r-project.org"))
 ```
 
 ibger requires curl >= 6.0.0 (declared in `DESCRIPTION`, so it is enforced at
@@ -32,7 +41,7 @@ install time). If an existing installation raises the error
 ## Quick start
 
 If you are new to the IBGE API, the vignette
-[Understanding the IBGE Aggregate Data API](https://strategicprojects.github.io/ibger/articles/api-concepts.html)
+[Understanding the IBGE Aggregate Data API](https://docs.ropensci.org/ibger/articles/api-concepts.html)
 explains the terminology used below (aggregates, variables,
 classifications, localities, periods).
 
@@ -96,7 +105,7 @@ dissemination standard and should not be treated as errors.
 
 As a consequence, users should not assume that the `value` column is always
 numeric. Use
-[`parse_ibge_value()`](https://strategicprojects.github.io/ibger/reference/parse_ibge_value.html)
+[`parse_ibge_value()`](https://docs.ropensci.org/ibger/reference/parse_ibge_value.html)
 to convert it to numeric in one step — its documentation lists every special
 code and how it is handled:
 
@@ -264,6 +273,6 @@ and may change without notice.
 
 ## Code of Conduct
 
-Please note that the ibger project is released with a
-[Contributor Code of Conduct](https://strategicprojects.github.io/ibger/CODE_OF_CONDUCT.html).
+Please note that this package is released with a
+[Contributor Code of Conduct](https://ropensci.org/code-of-conduct/).
 By contributing to this project, you agree to abide by its terms.
