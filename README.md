@@ -9,6 +9,7 @@
 [![R-CMD-check](https://github.com/ropensci/ibger/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ropensci/ibger/actions/workflows/R-CMD-check.yaml)
 [![Codecov test coverage](https://codecov.io/gh/ropensci/ibger/graph/badge.svg)](https://app.codecov.io/gh/ropensci/ibger)
 [![Status at rOpenSci Software Peer Review](https://badges.ropensci.org/787_status.svg)](https://github.com/ropensci/software-review/issues/787)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23367122.svg)](https://doi.org/10.5281/zenodo.23367122)
 <!-- badges: end -->
 
 Tidyverse-friendly interface to the [IBGE Aggregate Data
