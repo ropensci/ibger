@@ -15,6 +15,7 @@ authors:
     corresponding: true
     affiliation: "1, 2"
   - name: Marcos Wasiliew
+    orcid: 0009-0004-4694-3159
     affiliation: 1
   - name: Hugo Vasconcelos
     orcid: 0000-0001-6249-0920
@@ -30,7 +31,7 @@ affiliations:
     index: 1
   - name: Universidade Federal de Pernambuco, Recife, Brazil
     index: 2
-date: 8 July 2026
+date: 14 October 2026
 bibliography: paper.bib
 ---
 
@@ -70,7 +71,14 @@ agricultural surveys (PAM, PPM) anchor studies in economics, demography,
 public health, agriculture and regional planning. SIDRA is the
 canonical channel through which these aggregates reach the public, and
 reproducible research requires scripted, validated access to it rather
-than manual downloads from the website.
+than manual downloads from the website. `ibger` grew out of the
+production needs of Pernambuco's Strategic Monitoring Data Science
+Team, which builds R-based data solutions for monitoring state public
+policies [@medeiros2025], and is aimed at researchers, statistical
+agencies, journalists and analysts who need reliable, reproducible
+pipelines over Brazilian official statistics.
+
+# State of the field
 
 The main existing R client, `sidrar` [@sidrar], accesses the legacy
 SIDRA API and has served the community well, but it inherits that API's
@@ -87,14 +95,12 @@ spatial data sets, `censobr` [@censobr] provides census *microdata*,
 and `PNADcIBGE` [@pnadcibge] covers labor-survey microdata. None of
 them accesses the aggregate tables in SIDRA, which is precisely the
 layer `ibger` covers; as the example below shows, the packages compose
-naturally. `ibger` grew out of the production needs of Pernambuco's
-Strategic Monitoring Data Science Team, which builds R-based data
-solutions for monitoring state public policies [@medeiros2025], and is
-aimed at researchers, statistical agencies, journalists and analysts
-who need reliable, reproducible pipelines over Brazilian official
-statistics.
+naturally. Building on the existing client was not an option: the
+features that set `ibger` apart depend on the structured metadata that
+only the v3 API exposes, so they could not be added to a client of the
+legacy API.
 
-# Design and implementation
+# Software design
 
 Three design decisions distinguish `ibger`. First, queries are
 **validated before any request is sent**: parameters are checked
@@ -120,7 +126,7 @@ special value codes (zero, suppressed, not available) are converted by
 `parse_ibge_value()`. The package is tested against recorded API
 fixtures, so its behaviour is verified offline.
 
-# Example: mapping the 2022 Demographic Census
+## Example: mapping the 2022 Demographic Census
 
 The 2022 Census resident population of all 5,570 Brazilian
 municipalities (table 4709) is retrieved with a single call and joined
@@ -150,11 +156,38 @@ Demographic Census (IBGE table 4709), retrieved with a single
 `ibge_variables()` call and mapped with `geobr`
 geometries.](paper-figure1.png)
 
+# Research impact statement
+
+`ibger` is used in production by the Pernambuco state government's
+Strategic Monitoring Data Science Team [@medeiros2025] to feed
+dashboards and reports that monitor state public policies with IBGE
+indicators. Since its first CRAN release in February 2026 it has been
+downloaded about 1,800 times from the Posit (RStudio) CRAN mirror. The package
+passed rOpenSci software peer review
+([ropensci/software-review#787](https://github.com/ropensci/software-review/issues/787)),
+in which two independent reviewers ran the documented code against the
+live API, and is now maintained under the rOpenSci organization, with
+documentation at <https://docs.ropensci.org/ibger/>.
+
+# AI usage disclosure
+
+Recent development of `ibger` — the expansion of the test suite,
+documentation and vignettes, fixes made during rOpenSci review, and the
+drafting of this paper — was assisted by an LLM coding tool (Claude
+Code, Anthropic). The package architecture and public API design are
+human decisions that predate this assistance. All generated code and
+text were reviewed by the authors; code was verified with the package's
+test suite and `R CMD check`, and every documented example and vignette
+output was produced by running it against the live IBGE API rather
+than written by hand. The use of AI tools was also disclosed in the
+rOpenSci submission.
+
 # Acknowledgements
 
 We thank Daniel Vartanian for early feedback that motivated the
 automatic chunking feature and for suggesting the submission of the
-package to rOpenSci, and the IBGE for maintaining the public APIs on
-which this package relies.
+package to rOpenSci; the rOpenSci editor Beatriz Milz and reviewers
+Allan Quadros and Diana García-Cortés for their careful review; and the
+IBGE for maintaining the public APIs on which this package relies.
 
 # References
